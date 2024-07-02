@@ -20,9 +20,11 @@ repositories {
 extra["springCloudVersion"] = "2023.0.2"
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.springframework.cloud:spring-cloud-function-context")
+	implementation("org.springframework.cloud:spring-cloud-stream-binder-rabbit")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("io.projectreactor:reactor-test")
+	testImplementation("org.springframework.cloud:spring-cloud-stream-test-binder")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
